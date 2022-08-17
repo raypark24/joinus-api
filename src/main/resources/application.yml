@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://eks-postgresdb-instance-1.cxee3tqnntcf.ap-northeast-1.rds.amazonaws.com:5432/eksmem
-    username: eksmemuser
-    password: 2ksMemUser
+    url: jdbc:postgresql://localhost/ecp_sales
+    username: localecpuser
+    password: localecpuser
   jpa:
     properties:
       hibernate:
@@ -17,3 +17,6 @@ spring:
       ddl-auto: none
     show-sql: true
 
+springdoc:
+  swagger-ui:
+    path: /swagger/swagger-ui.html
