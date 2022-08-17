@@ -1,0 +1,5 @@
+FROM openjdk:8-jre-alpine
+WORKDIR /app
+COPY build/libs/eks-joinus-1.0-SNAPSHOT.jar eks-joinus.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "-Dserver.port=8080", "eks-joinus.jar"]

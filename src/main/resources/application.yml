@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://eks-postgresdb-instance-1.cxee3tqnntcf.ap-northeast-1.rds.amazonaws.com:5432/eksmem
+    username: eksmemuser
+    password: 2ksMemUser
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
